@@ -8,10 +8,10 @@ import {
 } from 'react-router-dom';
 //import {BrowserRouter, Route} from 'react-router-dom';
 require('./sass/styles');
-//import { App } from './components/App';
-import { Item } from './components/Item';
-// import { Routes } from './components/Routes';
-// import tasks from './data/tasksList';
+import { Apple } from './components/Apple';
+import { TasksTable } from './components/TasksTable';
+ import { Item } from './components/Item';
+import tasks from './data/tasksList';
 
 //----------------------------
 
@@ -132,22 +132,22 @@ const App = () => (
 
 // This demo uses a HashRouter instead of BrowserRouter
 // because there is no server to match URLs
-ReactDOM.render((
-  <HashRouter>
-    <App />
-  </HashRouter>
-), document.getElementById('app'))
-
-//----------------------------
-
-// const root = (
+// ReactDOM.render((
 //   <HashRouter>
 //     <App />
 //   </HashRouter>
-// 	);
+// ), document.getElementById('app'))
 
-// ReactDOM.render(root,
-// document.querySelector("#app"));
+//----------------------------
+
+const root = (
+  <HashRouter>
+    <Apple tasks={tasks}/>
+  </HashRouter>
+	);
+
+ReactDOM.render(root,
+document.querySelector("#app"));
 
 
 
