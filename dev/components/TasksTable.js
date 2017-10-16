@@ -13,7 +13,7 @@ import {Link} from 'react-router-dom';
 // });
 
 export const TasksTable = (props) => {
-    const tasks = props.tasks;
+    const {tasks} = props;
     const tasksList = tasks.map(( x, i )=> 
     		<li key={i}>
 	        	<span><Link to={`/${x.id}`}>{x.name}</Link></span>
